@@ -36,8 +36,8 @@ try:
     print("Distance :",distance,"cm")
     
     if distance>5:
-        fromaddr = "rait1033@gmail.com"
-        toaddr = "siddhesh.esskay.92@gmail.com"
+        fromaddr = "mail"
+        toaddr = "mail"
         msg = MIMEMultipart()
         
         msg['From'] = fromaddr
@@ -49,7 +49,7 @@ try:
                             
         server = smtplib.SMTP('smtp.gmail.com', port=587)
         server.starttls()
-        server.login(fromaddr, 'Raspberrypi')
+        server.login(fromaddr, 'pass')
         
         text = msg.as_string()
         server.sendmail(fromaddr,toaddr,text)
